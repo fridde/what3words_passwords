@@ -4,7 +4,8 @@ require 'vendor/autoload.php';
 require 'SwedenChecker.php';
 
 $api_root = 'https://api.what3words.com/v2/reverse';
-$key = 'G6XJ707H';
+$settings = parse_ini_file('key.ini');
+$key = $settings['key'];
 
 const PAUSE = 0.2 * 1000000;
 const ROUNDS = 50;
