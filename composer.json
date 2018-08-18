@@ -1,8 +1,19 @@
 {
     "name": "fridde/what3words_passwords",
     "description": "Create XKCD-like passwords using the word database of what3words",
+	"license": "MIT",
     "require": {
         "php": "^7.0",
         "guzzlehttp/guzzle": "^6.3"
-    }
+    },
+    "authors": [
+        {
+            "name": "fridde",
+            "email": "f@hehl.se"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Fridde\\": "src/" }
+    },
+    "minimum-stability": "dev"
 }

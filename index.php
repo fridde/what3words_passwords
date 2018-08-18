@@ -1,7 +1,9 @@
 <?php
 
-require 'vendor/autoload.php';
-require 'SwedenChecker.php';
+use Fridde\CountryChecker;
+
+require './vendor/autoload.php';
+define('BASE_DIR', __DIR__);
 
 $api_root = 'https://api.what3words.com/v2/reverse';
 $settings = parse_ini_file('key.ini');
@@ -12,12 +14,12 @@ const ROUNDS = 50;
 
 $client = new \GuzzleHttp\Client();
 
-$SwedenChecker = new SwedenChecker();
+$SwedenChecker = new CountryChecker('sweden');
 
 $results = [];
 
 foreach(range(1,ROUNDS) as $i){
-    $coordinate = $SwedenChecker->createSwedishCoordinate();
+    $coordinate = $SwedenChecker->createCoordinateInCountry();
 
     $query = [
         'key' => $key,
