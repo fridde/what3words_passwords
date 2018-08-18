@@ -1,5 +1,8 @@
 {
+    "name": "fridde/what3words_passwords",
+    "description": "Create XKCD-like passwords using the word database of what3words",
     "require": {
+        "php": "^7.0",
         "guzzlehttp/guzzle": "^6.3"
     }
 }
